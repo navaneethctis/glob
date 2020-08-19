@@ -1,0 +1,9 @@
+<h2 class="title">Posts</h2>
+<a class="button is-info mb-5" href="posts/create">Create Post</a>
+<% posts.forEach(post => { %>
+<div class="box">
+  <a class="is-size-5 link" href="/posts/<%= post.get('id') %>">
+    <%= post.get('title') %>
+  </a>
+</div>
+<% }); %>

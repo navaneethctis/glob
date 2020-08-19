@@ -1,0 +1,23 @@
+<h2 class="title"><%= post.get('title') %></h2>
+<p class="content"><%= post.get('body') %></p>
+<div class="buttons">
+  <a class="button is-warning" href="/posts/<%= post.get('id') %>/edit">Edit</a>
+  <a
+    class="button is-danger"
+    href="/posts/<%= post.get('id') %>"
+    id="delete-button"
+    >Delete</a
+  >
+  <a class="button is-light" href="/posts">Cancel</a>
+</div>
+<script>
+  const deleteButton = document.getElementById('delete-button');
+
+  deleteButton.addEventListener('click', event => {
+    event.preventDefault();
+
+    fetch(event.target.href, { method: 'DELETE' }).then(
+      () => (window.location.href = '/posts')
+    );
+  });
+</script>

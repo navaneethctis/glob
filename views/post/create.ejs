@@ -1,0 +1,35 @@
+<h2 class="title">Create Post</h2>
+<form action="/posts" method="POST">
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Title</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <input class="input" name="title" type="text" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Body</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <textarea class="textarea" name="body"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="field is-grouped is-grouped-right">
+    <p class="control">
+      <button class="button is-info">Submit</button>
+    </p>
+    <p class="control">
+      <a class="button is-light" href="/posts">Cancel</a>
+    </p>
+  </div>
+</form>
